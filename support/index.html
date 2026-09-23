@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support · Zalla</title>
+<meta name="description" content="Zalla Browser for iPhone. Built around you.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+:root {
+  --bg: #0f0f10;
+  --card: #1a1a1c;
+  --text: #f4f4f5;
+  --muted: #a1a1aa;
+  --accent: #E33B4F;
+  --border: #2a2a2e;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #fafafa;
+    --card: #ffffff;
+    --text: #18181b;
+    --muted: #71717a;
+    --border: #e4e4e7;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: inherit;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+.mark {
+  width: 28px; height: 28px; border-radius: 8px;
+  background: linear-gradient(145deg, #ff5a6e, var(--accent));
+  display: grid; place-items: center; color: white; font-size: 14px; font-weight: 800;
+}
+nav { display: flex; gap: 1rem; font-size: 0.95rem; }
+nav a { color: var(--muted); }
+nav a[aria-current="page"] { color: var(--text); font-weight: 600; }
+main {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+h1 { font-size: 1.85rem; letter-spacing: -0.03em; margin: 0 0 0.5rem; }
+h2 { font-size: 1.2rem; margin: 2rem 0 0.65rem; letter-spacing: -0.02em; }
+p, li { color: var(--text); }
+ul { padding-left: 1.2rem; }
+.lede { color: var(--muted); margin-bottom: 1.5rem; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+.hero {
+  padding: 3rem 1.25rem 2rem;
+  text-align: center;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+.hero h1 { font-size: 2.4rem; }
+.cta {
+  display: inline-block;
+  margin-top: 1.25rem;
+  background: var(--accent);
+  color: white !important;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 1.25rem 2.5rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="/"><span class="mark">Z</span> Zalla</a>
+  <nav>
+    <a href="/" >Home</a>
+    <a href="/privacy/" >Privacy</a>
+    <a href="/support/" aria-current="page">Support</a>
+  </nav>
+</header>
+<main>
+<h1>Support</h1>
+<p class="lede">Get help with Zalla Browser for iPhone.</p>
+<p><strong>App:</strong> Zalla Browser for iPhone</p>
+<p><strong>Contact:</strong> ZallaBrowser@pm.me</p>
+<p><strong>Developer:</strong> Kurt Paris</p>
+<p>Thanks for using Zalla. Built around you.</p>
+<h2>Get help</h2>
+<p>Email <strong>ZallaBrowser@pm.me</strong> with:</p>
+<ul>
+<li>What you were trying to do</li>
+<li>What happened instead</li>
+<li>Your iPhone model and iOS version (Settings → General → About)</li>
+<li>Zalla version (Settings in the app, or the App Store / TestFlight build number)</li>
+</ul>
+<p>We read every message. Replies may take a day or two.</p>
+<h2>Common fixes</h2>
+<p><strong>Page will not load.</strong> Check network, try Reload, or open the same URL in another browser to see if the site is down.</p>
+<p><strong>Clear browsing data.</strong> Settings → Clear browsing data. This clears history, website data, and tabs as described in the app. Downloads may be kept.</p>
+<p><strong>Reset preferences.</strong> Settings → Reset the App restores default home shortcuts and related prefs. Bookmarks are kept.</p>
+<p><strong>Import bookmarks.</strong> Use an HTML bookmark export from Safari, Chrome, or Firefox, then import from Library or onboarding.</p>
+<p><strong>Export As / Photos.</strong> Long-press an image, choose Export image as, then Save to Photos if you want it in your library. iOS must allow Photos access.</p>
+<p><strong>Reader mode.</strong> Menu → Reader mode. Some pages do not extract cleanly; Exit reader and browse normally.</p>
+<p><strong>Private tabs.</strong> Use New Private Tab from the tab menu. Private browsing still loads live websites; sites can still see that visit.</p>
+<h2>Feedback and TestFlight</h2>
+<p>Bug reports and feature ideas are welcome at the same email. If you are on TestFlight, include the build number shown in TestFlight.</p>
+<h2>Privacy</h2>
+<p>See the <a href="/privacy/">Privacy Policy</a> for how Zalla handles data on your device.</p>
+</main>
+<footer>
+  © 2026 Kurt Paris · Zalla · <a href="mailto:ZallaBrowser@pm.me">ZallaBrowser@pm.me</a>
+</footer>
+</body>
+</html>
