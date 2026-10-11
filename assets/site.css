@@ -118,3 +118,28 @@ section .lede{margin:1rem 0 0}
 .notfound .btn{margin:1rem .5rem 0 0}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 main p a:not(.btn),main li a:not(.btn),.lede a{text-decoration:underline;text-underline-offset:2px}
+
+.btn-lg{padding:.95rem 1.6rem;font-size:1.05rem}
+.contact{border-top:1px solid var(--line)}
+.contact-card{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:2rem;padding:2.5rem;border:1px solid var(--line);border-radius:24px;background:radial-gradient(circle at 100% 0,rgba(227,59,79,.18),transparent 60%),var(--card)}
+.contact-card .lede{margin-bottom:0}
+.contact-actions{text-align:center}
+.contact-actions .fine{color:var(--muted);font-size:.9rem;margin:.6rem 0 0}
+.doc-wide{max-width:60rem}
+.support-hero{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1.5rem;padding-bottom:2rem;border-bottom:1px solid var(--line)}
+.support-hero .lede{margin-bottom:.5rem}
+.support-hero p{margin-top:0}
+.support-cta .fine{color:var(--muted);font-size:.88rem;margin:.6rem 0 0}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0}
+.facts div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1rem 1.25rem}
+.facts dt{color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.1em}
+.facts dd{margin:.2rem 0 0;font-weight:600}
+.doc-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.5rem 1.75rem;margin:1rem 0}
+.doc-card h2{margin-top:0}
+.fixes{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.fix{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.25rem 1.4rem}
+.fix h3{font-size:1.05rem;margin:0 0 .4rem;letter-spacing:-.01em}
+.fix p{margin:0;color:var(--muted);font-size:.95rem}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
+.duo .doc-card{margin:0}
+@media(max-width:700px){.facts,.fixes,.duo{grid-template-columns:1fr}.contact-card{padding:1.75rem}.contact-actions{text-align:left}}
