@@ -3,131 +3,162 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zalla Browser · Zalla</title>
-<meta name="description" content="Zalla Browser for iPhone. Built around you.">
+<title>Zalla: a private, customizable browser for iPhone</title>
+<meta name="description" content="Zalla is a private, local-first web browser for iPhone. Built around you, with deep customization, tracker and ad blocking, and no account. Private by default. Beautiful by design.">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="canonical" href="https://zalla.gg/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<style>
-:root {
-  --bg: #0f0f10;
-  --card: #1a1a1c;
-  --text: #f4f4f5;
-  --muted: #a1a1aa;
-  --accent: #E33B4F;
-  --border: #2a2a2e;
-}
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: #fafafa;
-    --card: #ffffff;
-    --text: #18181b;
-    --muted: #71717a;
-    --border: #e4e4e7;
-  }
-}
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
-header {
-  border-bottom: 1px solid var(--border);
-  padding: 1rem 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  color: inherit;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  text-decoration: none;
-}
-.mark {
-  width: 28px; height: 28px; border-radius: 8px;
-  background: linear-gradient(145deg, #ff5a6e, var(--accent));
-  display: grid; place-items: center; color: white; font-size: 14px; font-weight: 800;
-}
-nav { display: flex; gap: 1rem; font-size: 0.95rem; }
-nav a { color: var(--muted); }
-nav a[aria-current="page"] { color: var(--text); font-weight: 600; }
-main {
-  max-width: 42rem;
-  margin: 0 auto;
-  padding: 2rem 1.25rem 4rem;
-}
-h1 { font-size: 1.85rem; letter-spacing: -0.03em; margin: 0 0 0.5rem; }
-h2 { font-size: 1.2rem; margin: 2rem 0 0.65rem; letter-spacing: -0.02em; }
-p, li { color: var(--text); }
-ul { padding-left: 1.2rem; }
-.lede { color: var(--muted); margin-bottom: 1.5rem; }
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 1.5rem;
-  margin-top: 1.5rem;
-}
-.hero {
-  padding: 3rem 1.25rem 2rem;
-  text-align: center;
-  max-width: 36rem;
-  margin: 0 auto;
-}
-.hero h1 { font-size: 2.4rem; }
-.cta {
-  display: inline-block;
-  margin-top: 1.25rem;
-  background: var(--accent);
-  color: white !important;
-  padding: 0.7rem 1.2rem;
-  border-radius: 999px;
-  font-weight: 600;
-  text-decoration: none !important;
-}
-footer {
-  border-top: 1px solid var(--border);
-  padding: 1.5rem 1.25rem 2.5rem;
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-</style>
+<link rel="apple-touch-icon" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Zalla">
+<meta property="og:url" content="https://zalla.gg/">
+<meta property="og:title" content="Zalla: Built around you.">
+<meta property="og:description" content="A private, local-first browser for iPhone that you can actually make your own. Private by default. Beautiful by design.">
+<meta property="og:image" content="https://zalla.gg/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Zalla: Built around you.">
+<meta name="twitter:description" content="A private, local-first browser for iPhone. Private by default. Beautiful by design.">
+<meta name="twitter:image" content="https://zalla.gg/assets/og.png">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Zalla","operatingSystem":"iOS 17 or later","applicationCategory":"BrowserApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"Kurt Paris"},"url":"https://zalla.gg/"}</script>
 </head>
 <body>
-<header>
-  <a class="brand" href="/"><span class="mark">Z</span> Zalla</a>
-  <nav>
-    <a href="/" aria-current="page">Home</a>
-    <a href="/privacy/" >Privacy</a>
-    <a href="/support/" >Support</a>
-  </nav>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/favicon.svg" alt="" width="30" height="30"> Zalla</a>
+    <nav class="site-nav" aria-label="Main">
+      <a class="opt" href="#customize">Customize</a>
+      <a class="opt" href="#privacy">Privacy</a>
+      <a class="opt" href="#pricing">Pricing</a>
+      <a href="/support/">Support</a>
+    </nav>
+  </div>
 </header>
 <main>
 
-<div class="hero">
-  <h1>Built around you.</h1>
-  <p class="lede">Zalla is a privacy-conscious browser for iPhone. Local-first. Yours to shape.</p>
-  <a class="cta" href="/support/">Get support</a>
-</div>
-<div class="card">
-  <p><strong>App Store links</strong></p>
-  <p><a href="/privacy/">Privacy Policy</a> · <a href="/support/">Support</a></p>
-  <p class="lede" style="margin:0">Contact: <a href="mailto:ZallaBrowser@pm.me">ZallaBrowser@pm.me</a></p>
-</div>
+<section class="hero" style="border-top:0">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">A browser for iPhone</p>
+      <h1>Built around <em>you.</em></h1>
+      <p class="tag">Private by default. Beautiful by design.</p>
+      <p class="lede">Zalla is a web browser you can actually make your own. Pick the theme, the color, the icon and where every button goes. Trackers and ads are blocked out of the box, and your history never leaves your phone.</p>
+      <div class="actions">
+        <!-- APP STORE LINK: when Zalla is live, change this to <a class="btn btn-red" href="https://apps.apple.com/app/id6814680880">Download on the App Store</a> -->
+        <span class="btn btn-soon" aria-label="Coming soon to the App Store"><svg width="18" height="22" viewBox="0 0 384 470" aria-hidden="true"><path fill="currentColor" d="M318 249c-1-55 45-82 47-83-26-38-66-43-80-43-34-4-66 20-83 20s-44-19-72-19C93 125 59 147 40 181c-39 68-10 168 28 223 18 27 40 57 69 56 28-1 38-18 72-18s43 18 72 17c30 0 49-27 67-54 21-31 30-61 30-63-1 0-58-22-60-93zM263 87c15-18 26-44 23-69-22 1-49 15-65 33-14 16-27 42-23 67 24 2 50-13 65-31z"/></svg><span><small>Coming soon to the</small>App Store</span></span>
+        <a class="btn" href="#customize">See what it does</a>
+      </div>
+      <p class="fine">Free. iPhone with iOS 17 or later. Currently in App Store review.</p>
+    </div>
+    <div class="phones">
+      <div class="phone"><img src="/assets/shots/newtab-red-390.webp" srcset="/assets/shots/newtab-red-390.webp 390w, /assets/shots/newtab-red-780.webp 780w" sizes="(max-width:600px) 45vw, 260px" width="390" height="848" alt="Zalla new tab page with the red theme" decoding="async"></div>
+      <div class="phone"><img src="/assets/shots/newtab-space-390.webp" srcset="/assets/shots/newtab-space-390.webp 390w, /assets/shots/newtab-space-780.webp 780w" sizes="(max-width:600px) 45vw, 260px" width="390" height="848" alt="Zalla new tab page with the Space theme" decoding="async"></div>
+    </div>
+  </div>
+</section>
+
+<section id="customize">
+  <div class="wrap">
+    <p class="eyebrow">Customization</p>
+    <h2>Most browsers let you pick a search engine. Zalla goes a bit further.</h2>
+    <p class="lede">Zalla started because other browsers would not let me change much. So nearly everything here is a setting: how it looks, how it feels, and where things live.</p>
+    <div class="showcase">
+      <figure><div class="phone"><img src="/assets/shots/themes-390.webp" srcset="/assets/shots/themes-390.webp 390w, /assets/shots/themes-780.webp 780w" sizes="(max-width:600px) 45vw, 260px" width="390" height="848" alt="Theme packs: Space, Jungle and Volcano" loading="lazy" decoding="async"></div><figcaption><strong>Themes</strong><span>Clean everyday themes, plus animated packs like Volcano, Ocean, Retro Arcade, Neon City, Arctic and Cherry Blossom.</span></figcaption></figure>
+      <figure><div class="phone"><img src="/assets/shots/colors-390.webp" srcset="/assets/shots/colors-390.webp 390w, /assets/shots/colors-780.webp 780w" sizes="(max-width:600px) 45vw, 260px" width="390" height="848" alt="Accent color picker in Zalla settings" loading="lazy" decoding="async"></div><figcaption><strong>Your color</strong><span>Choose from the presets or pick any accent color you like. Zalla uses it across the app.</span></figcaption></figure>
+      <figure><div class="phone"><img src="/assets/shots/icons-390.webp" srcset="/assets/shots/icons-390.webp 390w, /assets/shots/icons-780.webp 780w" sizes="(max-width:600px) 45vw, 260px" width="390" height="848" alt="Alternate app icon choices" loading="lazy" decoding="async"></div><figcaption><strong>App icons</strong><span>A grid of alternate icons, so Zalla matches your home screen instead of the other way around.</span></figcaption></figure>
+      <figure><div class="phone"><img src="/assets/shots/menu-390.webp" srcset="/assets/shots/menu-390.webp 390w, /assets/shots/menu-780.webp 780w" sizes="(max-width:600px) 45vw, 260px" width="390" height="848" alt="Customizable menu and quick action bar" loading="lazy" decoding="async"></div><figcaption><strong>Toolbar and menu</strong><span>Classic, Compact or Quick Action bar. Address bar on top or bottom. Reorder what is in the menu.</span></figcaption></figure>
+    </div>
+    <div class="chips"><span class="chip">Animated themes</span><span class="chip">Custom accent color</span><span class="chip">Alternate icons</span><span class="chip">Top or bottom address bar</span><span class="chip">Three toolbar modes</span><span class="chip">Home screen widgets</span><span class="chip">Background images for new tabs</span></div>
+  </div>
+</section>
+
+<section id="privacy">
+  <div class="wrap">
+    <p class="eyebrow">Privacy</p>
+    <h2>Private by default. Every protection has a switch.</h2>
+    <p class="lede">Protections start on, and you can turn any of them off when a site needs it. Zalla has no account and no analytics, so there is nothing for us to collect.</p>
+    <div class="split">
+      <ul class="list">
+        <li><strong>Tracker and ad blocking</strong><span>Built on EasyList based rules, with per-site allow lists for the sites you want to support.</span></li>
+        <li><strong>Burn It All</strong><span>One button wipes your browsing data, plays a short fire animation, and drops you on a fresh tab.</span></li>
+        <li><strong>Privacy Shield</strong><span>Encrypted DNS for Zalla's own requests, tracking parameter stripping, fingerprinting protection, referrer trimming, and an optional proxy you supply.</span></li>
+        <li><strong>Local-first</strong><span>History, bookmarks and settings stay on your iPhone. No sign-in, no sync server, nothing sent to us.</span></li>
+        <li><strong>Face ID for private tabs</strong><span>Lock your private tabs behind Face ID. Included with Zalla Unlock.</span></li>
+      </ul>
+      <div class="phones">
+        <div class="phone"><img src="/assets/shots/privacy-390.webp" srcset="/assets/shots/privacy-390.webp 390w, /assets/shots/privacy-780.webp 780w" sizes="(max-width:600px) 45vw, 260px" width="390" height="848" alt="Privacy settings with content blocking and Burn It All" loading="lazy" decoding="async"></div>
+        <div class="phone"><img src="/assets/shots/fire-390.webp" srcset="/assets/shots/fire-390.webp 390w, /assets/shots/fire-780.webp 780w" sizes="(max-width:600px) 45vw, 260px" width="390" height="848" alt="Burn It All fire animation" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+    <p class="note"><strong>Zalla is not a VPN.</strong> Privacy Shield does not hide your IP address or route your traffic through our servers. We do not run any servers for that. If you already use a proxy, you can point Zalla at it.</p>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <p class="eyebrow">Everything else</p>
+    <h2>The rest of the browser.</h2>
+    <div class="grid">
+      <div class="cell"><h3>No account</h3><p>Open it and browse. There is nothing to sign up for.</p></div>
+      <div class="cell"><h3>Works with Apple Passwords</h3><p>Zalla uses iOS AutoFill, so your saved passwords work as usual. We do not keep a vault of our own.</p></div>
+      <div class="cell"><h3>Home screen widgets</h3><p>Your favorites and Privacy Report totals, right on the home screen.</p></div>
+      <div class="cell"><h3>Private tabs</h3><p>Separate from your normal tabs. Lock them with Face ID if you have Zalla Unlock.</p></div>
+      <div class="cell"><h3>Reader mode</h3><p>Strip a cluttered article down to the text.</p></div>
+      <div class="cell"><h3>Cookie banner blocking</h3><p>Hides a lot of the consent pop-ups, if you want it to.</p></div>
+      <div class="cell"><h3>Tab groups</h3><p>Keep work, shopping and the rabbit holes apart. Part of Zalla Unlock.</p></div>
+      <div class="cell"><h3>Per-site settings</h3><p>Allow a site through the blocker, or give it your own CSS with Zalla Unlock.</p></div>
+      <div class="cell"><h3>Scheduled auto-clear</h3><p>Have Zalla clean up after itself on a schedule. Part of Zalla Unlock.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <p class="eyebrow">Pricing</p>
+    <h2>Free. One small unlock if you want more.</h2>
+    <p class="lede">No subscription, no ads, no tracking. The core browser and its privacy protections are free.</p>
+    <div class="pricing">
+      <div class="plan"><h3>Zalla</h3><div class="price">Free</div><p>The full browser.</p><ul><li>Tracker and ad blocking</li><li>Burn It All</li><li>Privacy Shield</li><li>Themes, accent colors and toolbar layouts</li></ul></div>
+      <div class="plan hl"><h3>Zalla Unlock</h3><div class="price">$1.99 <small>once</small></div><p>Pay once, keep it. Works with Family Sharing.</p><ul><li>Animated premium theme packs</li><li>Face ID for private tabs</li><li>Tab groups and per-site CSS</li><li>Scheduled auto-clear and more</li></ul></div>
+      <div class="plan"><h3>Tips</h3><div class="price">Optional</div><p>Three tip sizes if you want to support development.</p><ul><li>Tips do not unlock anything</li><li>They just say thanks</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <p class="eyebrow">FAQ</p>
+    <h2>Questions people ask.</h2>
+    <div class="faq">
+      <details><summary>Is Zalla a VPN?</summary><p>No. Privacy Shield is a set of in-browser protections like encrypted DNS and tracking parameter stripping. It does not hide your IP address or tunnel your traffic. If you already use a proxy, you can enter it in settings and Zalla will use it for pages you load.</p></details>
+      <details><summary>Does Zalla collect my data?</summary><p>No. There is no account, no analytics and no third party SDKs. Your history, bookmarks and settings stay on your iPhone. The <a href="/privacy/">privacy policy</a> has the details.</p></details>
+      <details><summary>Can I turn the blocking off?</summary><p>Yes. Every protection has its own toggle, and you can allow individual sites. Privacy is the default, not a requirement.</p></details>
+      <details><summary>What does Burn It All delete?</summary><p>Your tabs, history, cookies and site data. Bookmarks, downloads and settings stay. It asks first, plays the fire (or a quick fade, if you turn the fire off), and opens a fresh tab.</p></details>
+      <details><summary>Does it have a password manager?</summary><p>Zalla does not store passwords itself. It works with iOS AutoFill, so Apple Passwords and other AutoFill providers fill in logins as they do elsewhere.</p></details>
+      <details><summary>What do I get with Zalla Unlock?</summary><p>The premium themes and the extra features listed above, for a one-time $1.99. It works with Family Sharing, and Restore Purchases is in the Unlock screen.</p></details>
+      <details><summary>Which devices does it run on?</summary><p>iPhone with iOS 17 or later.</p></details>
+      <details><summary>When can I get it?</summary><p>Zalla is in App Store review right now. The button at the top of this page will change to a download link as soon as it is live.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="closer">
+  <div class="wrap">
+    <h2>Built around you.</h2>
+    <p class="lede">Questions, bug reports or theme ideas: <a href="mailto:ZallaBrowser@pm.me">ZallaBrowser@pm.me</a></p>
+    <!-- APP STORE LINK: swap for https://apps.apple.com/app/id6814680880 when live -->
+    <span class="btn btn-soon" aria-label="Coming soon to the App Store"><span><small>Coming soon to the</small>App Store</span></span>
+  </div>
+</section>
 
 </main>
-<footer>
-  © 2026 Kurt Paris · Zalla · <a href="mailto:ZallaBrowser@pm.me">ZallaBrowser@pm.me</a>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; 2026 Kurt Paris. Zalla is made by one person.</span>
+    <nav aria-label="Footer"><a href="/privacy/">Privacy</a><a href="/support/">Support</a><a href="mailto:ZallaBrowser@pm.me">ZallaBrowser@pm.me</a></nav>
+  </div>
 </footer>
 </body>
 </html>
