@@ -1,4 +1,4 @@
-:root{--bg:#0a0a0b;--bg2:#121214;--card:#161618;--line:#26262a;--text:#f5f5f6;--muted:#a3a3ab;--red:#E33B4F;--red2:#ff5a6e;--max:72rem}
+:root{color-scheme:dark;--bg:#0a0a0b;--bg2:#121214;--card:#161618;--line:#26262a;--text:#f5f5f6;--muted:#a3a3ab;--red:#E33B4F;--red2:#ff5a6e;--max:72rem}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -20,8 +20,8 @@ h1,h2,h3{letter-spacing:-.03em;line-height:1.1;margin:0}
 .lede{color:var(--muted);font-size:1.15rem;max-width:36rem}
 .btn{display:inline-flex;align-items:center;gap:.55rem;padding:.8rem 1.3rem;border-radius:999px;font-weight:600;font-size:.98rem;border:1px solid var(--line);color:var(--text)}
 .btn:hover{text-decoration:none;border-color:#3a3a40}
-.btn-red{background:var(--red);border-color:var(--red);color:#fff}
-.btn-red:hover{background:#cf3045;border-color:#cf3045}
+.btn-red{background:#cf3045;border-color:#cf3045;color:#fff}
+.btn-red:hover{background:#b8283b;border-color:#b8283b}
 .btn-soon{background:#fff;color:#000;border-color:#fff;cursor:default}
 .btn-soon small{display:block;font-size:.68rem;font-weight:500;opacity:.7;line-height:1}
 .btn-soon span{line-height:1.15;text-align:left}
@@ -109,3 +109,12 @@ section .lede{margin:1rem 0 0}
  .showcase .phone{width:70%;margin:0 auto}
  .showcase figcaption span{font-size:.85rem}
 }
+
+.skip{position:absolute;left:1rem;top:-3rem;z-index:100;background:var(--red);color:#fff;padding:.6rem 1rem;border-radius:8px;font-weight:600}
+.skip:focus{top:1rem;text-decoration:none}
+:focus-visible{outline:2px solid var(--red2);outline-offset:3px;border-radius:6px}
+.faq summary:focus-visible{outline-offset:6px}
+.notfound{text-align:left;min-height:50vh}
+.notfound .btn{margin:1rem .5rem 0 0}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+main p a:not(.btn),main li a:not(.btn),.lede a{text-decoration:underline;text-underline-offset:2px}
