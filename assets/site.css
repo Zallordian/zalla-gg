@@ -204,10 +204,72 @@ main p a:not(.btn),main li a:not(.btn),.lede a{text-decoration:underline;text-un
 .menu[open] .bars{background:transparent}
 .menu[open] .bars::before{transform:translateY(6px) rotate(45deg)}
 .menu[open] .bars::after{transform:translateY(-6px) rotate(-45deg)}
-.menu-panel{position:fixed;left:0;right:0;top:60px;background:#0e0e10;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding:.5rem 1.25rem 1.25rem;display:grid;box-shadow:0 20px 40px rgba(0,0,0,.5)}
+.menu-panel{position:absolute;left:0;right:0;top:100%;background:#0e0e10;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding:.5rem 1.25rem 1.25rem;display:grid;box-shadow:0 20px 40px rgba(0,0,0,.5)}
 .menu-panel a{color:var(--text);font-size:1.1rem;font-weight:600;padding:.9rem .25rem;border-bottom:1px solid var(--line)}
 .menu-panel a:last-child{border-bottom:0}
 .menu-panel a:hover{text-decoration:none;color:var(--red2)}
 .menu-panel a[aria-current=page]{color:var(--red2)}
 @media(max-width:860px){.site-nav{display:none}.menu{display:block}}
 [id]{scroll-margin-top:72px}
+
+/* robustness and mobile pass */
+html,body{overflow-x:clip;max-width:100%}
+body{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.site-header .wrap{min-width:0}
+.site-nav{min-width:0;overflow:hidden;flex-wrap:nowrap}
+.site-nav a{white-space:nowrap;flex:none}
+.brand{flex:none}
+.wrap{padding-left:max(1.25rem,env(safe-area-inset-left));padding-right:max(1.25rem,env(safe-area-inset-right))}
+.site-header{padding-top:env(safe-area-inset-top)}
+.site-footer{padding-bottom:max(3rem,calc(env(safe-area-inset-bottom) + 1.5rem))}
+.menu-panel{padding-left:max(1.25rem,env(safe-area-inset-left));padding-right:max(1.25rem,env(safe-area-inset-right));max-height:calc(100dvh - 60px);overflow-y:auto}
+.menu-panel a{min-height:48px;display:flex;align-items:center}
+img,video,svg{max-width:100%}
+@media(max-width:860px){
+ .site-footer nav a,.site-footer span{display:inline-flex;align-items:center;min-height:44px}
+ .site-footer .wrap{flex-direction:column;align-items:flex-start;gap:.5rem}
+ .site-footer nav{gap:.25rem 1.25rem}
+ .btn,.btn-sm{min-height:44px}
+ .faq summary{min-height:44px;align-items:center}
+ .logo-card figcaption a,.doc a,.lede a{display:inline-block;padding:.35rem 0}
+}
+@media(max-width:600px){
+ body{font-size:16px}
+ section{padding:3.25rem 0}
+ section h2{font-size:clamp(1.7rem,7.5vw,2.2rem)}
+ .lede{font-size:1.05rem}
+ .hero{padding:2.5rem 0 2.5rem}
+ .hero h1{font-size:clamp(2.4rem,11vw,3rem)}
+ .hero .wrap{gap:2rem}
+ .hero .actions{gap:.6rem}
+ .hero .actions .btn{flex:1 1 auto;justify-content:center}
+ /* carousels */
+ .showcase,.wp-grid,.slides{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:.9rem;margin-left:calc(-1*max(1.25rem,env(safe-area-inset-left)));margin-right:calc(-1*max(1.25rem,env(safe-area-inset-right)));padding:0 max(1.25rem,env(safe-area-inset-left)) .75rem;scroll-padding:0 max(1.25rem,env(safe-area-inset-left));-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none}
+ .showcase::-webkit-scrollbar,.wp-grid::-webkit-scrollbar,.slides::-webkit-scrollbar{display:none}
+ .showcase figure{flex:0 0 62%;scroll-snap-align:start}
+ .showcase .phone{width:100%}
+ .wp-grid .wp{flex:0 0 84%;scroll-snap-align:start}
+ .slides figure{flex:0 0 42%;scroll-snap-align:start}
+ .wp-shots{grid-template-columns:1fr 2.6fr}
+ .swipe-hint{display:block}
+ /* compact press kit */
+ .logo-grid{grid-template-columns:1fr 1fr;gap:.75rem}
+ .logo-stage{height:110px;padding:.75rem}
+ .logo-stage img{max-height:80px;width:auto;height:auto}
+ .logo-card figcaption{padding:.75rem .85rem;font-size:.9rem}
+ .swatches{grid-template-columns:repeat(3,1fr);gap:.5rem}
+ .swatch{padding:.75rem}
+ .swatch .chipc{height:40px}
+ .swatch span:last-child{display:none}
+ .sub{margin:2.5rem 0 .75rem;font-size:1.25rem}
+ .contact-card{padding:1.5rem}
+ .contact-actions .btn{width:100%;justify-content:center}
+ /* readable policy */
+ .doc{padding:2.25rem max(1.25rem,env(safe-area-inset-left)) 3.5rem}
+ .doc p,.doc li{font-size:1.02rem;line-height:1.7;overflow-wrap:anywhere}
+ .doc h2{font-size:1.25rem;margin-top:2rem}
+ .support-cta{width:100%}
+ .support-cta .btn{width:100%;justify-content:center}
+ .grid,.pricing,.fixes,.duo,.facts{grid-template-columns:1fr}
+}
+.swipe-hint{display:none;color:var(--muted);font-size:.85rem;margin:.75rem 0 0}
