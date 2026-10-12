@@ -38,14 +38,26 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="/"><img src="/assets/icon-192.png" alt="" width="30" height="30"> Zalla</a>
+    <a class="brand" href="/" aria-label="Zalla home"><img src="/assets/icon-192.png" alt="" width="30" height="30"> Zalla</a>
     <nav class="site-nav" aria-label="Main">
-      <a class="opt" href="/#customize">Customize</a>
-      <a class="opt" href="/#privacy">Privacy</a>
-      <a class="opt" href="/#pricing">Pricing</a>
-      <a href="/community/">Community</a>
-      <a href="/support/">Support</a>
+        <a href="/#customize">Features</a>
+        <a href="/#privacy">Privacy</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/community/">Community</a>
+        <a href="/support/">Support</a>
+        <a href="/#contact">Contact</a>
     </nav>
+    <details class="menu">
+      <summary aria-label="Open menu"><span class="bars" aria-hidden="true"></span></summary>
+      <nav class="menu-panel" aria-label="Main menu">
+        <a href="/#customize">Features</a>
+        <a href="/#privacy">Privacy</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/community/">Community</a>
+        <a href="/support/">Support</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </details>
   </div>
 </header>
 <main class="doc notfound" id="main">
@@ -57,8 +69,9 @@
 <footer class="site-footer">
   <div class="wrap">
     <span>&copy; 2026 Kurt Paris. Zalla is made by one person who cares about customization and privacy.</span>
-    <nav aria-label="Footer"><a href="/privacy/">Privacy</a><a href="/support/">Support</a><a href="/community/">Community</a><a href="/#contact">Contact</a><a href="mailto:ZallaBrowser@pm.me">ZallaBrowser@pm.me</a></nav>
+    <nav aria-label="Footer"><a href="/privacy/">Privacy Policy</a><a href="/support/">Support</a><a href="/community/">Community</a><a href="/#contact">Contact</a><a href="mailto:ZallaBrowser@pm.me">ZallaBrowser@pm.me</a></nav>
   </div>
 </footer>
+<script>document.addEventListener("keydown",function(e){if(e.key==="Escape"){var d=document.querySelector("details.menu[open]");if(d){d.removeAttribute("open");d.querySelector("summary").focus();}}});document.addEventListener("click",function(e){var d=document.querySelector("details.menu[open]");if(d&&(!d.contains(e.target)||e.target.closest(".menu-panel a")))d.removeAttribute("open");});</script>
 </body>
 </html>
