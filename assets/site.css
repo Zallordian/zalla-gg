@@ -22,9 +22,9 @@ h1,h2,h3{letter-spacing:-.03em;line-height:1.1;margin:0}
 .btn:hover{text-decoration:none;border-color:#3a3a40}
 .btn-red{background:#cf3045;border-color:#cf3045;color:#fff}
 .btn-red:hover{background:#b8283b;border-color:#b8283b}
-.btn-soon{background:#fff;color:#000;border-color:#fff;cursor:default}
-.btn-soon small{display:block;font-size:.68rem;font-weight:500;opacity:.7;line-height:1}
-.btn-soon span{line-height:1.15;text-align:left}
+.store-badge{display:inline-flex;align-items:center;line-height:0;border-radius:8px}
+.store-badge:hover{text-decoration:none;opacity:.92}
+.store-badge img{height:40px;width:auto;display:block}
 .hero{position:relative;overflow:hidden;padding:5.5rem 0 4rem}
 .hero::before{content:"";position:absolute;inset:-30% -10% auto auto;width:60rem;height:60rem;background:radial-gradient(closest-side,rgba(227,59,79,.28),transparent 70%);pointer-events:none}
 .hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
